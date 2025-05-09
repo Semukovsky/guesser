@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block body %}
+    <div class.>
+        {% for item in message %}
+            <h1 class="text">{{ item }}</h1>
+        {% endfor %}
+    </div>
+    <a href="{{ url_for('main') }}" class="my-button btn">Еще раз</a>
+{% endblock %}

@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block body %}
+	<div class="image-container">
+	  <img src="static/img/city_1.png" alt="Image 1">
+	  <img src="static/img/city_2.png" alt="Image 2">
+	  <img src="static/img/city_3.png" alt="Image 3">
+	</div>
+	<br><br><br>
+	<h1 class="text">Угадай, какой город изображен?</h1>
+	<form action="/" method="POST">
+		{% for city in cities %}
+		  {% set button_value = city %}
+		  <button class="my-button" name="city" value="{{ button_value }}">{{ city }}</button>
+		{% endfor %}
+	</form>
+{% endblock %}
