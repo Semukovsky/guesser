@@ -25,7 +25,7 @@ def main():
         coords = get_coordinates(city)
         # print(f"city-> {city} | coords-> {coords}")
 
-        types_of_zoom = [12, 13, 14, 15, 16]
+        types_of_zoom = [13, 14, 15, 16]
         types_of_maps = ['sat', 'map', 'sat,skl']
         types_of_rotate = [0, 90, 180, 270]
 
@@ -38,7 +38,7 @@ def main():
 
             # формируем URL запроса для получения изображения
             url = f'https://static-maps.yandex.ru/1.x/?ll={coords[0]},{coords[1]}&z={zoom}&l={map_type}&size=450,450'
-
+            print(url)
             # отправляем запрос и получаем изображение в ответ
             response = requests.get(url)
             image = response.content
